@@ -102,7 +102,7 @@ API'den veri çekiliyor...
 ✓ altin - OK
 
 ✓ Cache başarıyla güncellendi!
-Dosya: /var/www/html/api-cache.json
+Dosya: /var/www/html/genelpara-cache.json
 Boyut: 12.45 KB
 Sonraki güncelleme: 15 dakika sonra
 ```
@@ -153,7 +153,7 @@ php cache-updater.php >> /var/log/cache.log 2>&1
 ```php
 <?php
 // Cache'den veri oku
-$cacheFile = __DIR__ . '/api-cache.json';
+$cacheFile = __DIR__ . '/genelpara-cache.json';
 $cacheData = json_decode(file_get_contents($cacheFile), true);
 
 // Döviz kurları
@@ -211,13 +211,13 @@ $categories = [
 ### Cache Dosyası Konumu
 
 ```php
-define('CACHE_FILE', __DIR__ . '/api-cache.json');
+define('CACHE_FILE', __DIR__ . '/genelpara-cache.json');
 ```
 
 Farklı bir yere kaydetmek için:
 
 ```php
-define('CACHE_FILE', '/var/cache/genelpara/api-cache.json');
+define('CACHE_FILE', '/var/cache/genelpara/genelpara-cache.json');
 ```
 
 ---
@@ -235,7 +235,7 @@ ls -la /var/www/html/
 
 # İzin ver
 chmod 755 /var/www/html/
-chmod 666 /var/www/html/api-cache.json
+chmod 666 /var/www/html/genelpara-cache.json
 ```
 
 ### Cron Job Çalışmıyor
@@ -391,6 +391,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 **⭐ Bu projeyi faydalı bulduysanız yıldızlamayı unutmayın!**
 
-Made with ❤️ by [Berk Öcan](https://github.com/berkocan)
+Made with ❤️ by [Berko Can](https://github.com/berkocan)
 
 </div>
